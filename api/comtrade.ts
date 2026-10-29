@@ -1,2 +1,2 @@
-import { handleComtrade } from "../server/comtradeProxy";
+import { handleComtrade } from "../server/comtradeProxy.js";
 export default handleComtrade;

@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { countries } from "../src/data/countryMapping.ts";
+import { countries } from "../src/data/countryMapping.js";
 const allowedCountries = new Set(countries.map((c) => c.m49));
 export type QueryKind = "availability" | "total" | "products" | "buyers";
 export function upstreamUrl(params: URLSearchParams): URL {
