@@ -1,10 +1,20 @@
 # World Trade Explorer
 
-Explorador interactivo de exportaciones de mercancías por país. Proyecto de portfolio construido con React, TypeScript y Vite.
+An interactive explorer for annual merchandise exports by country. A portfolio project built with React, TypeScript, and Vite.
+
+## Local development
+
+Requires Node.js 22.12 or later and npm.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Requiere Node.js 22.12 o posterior. Esta primera etapa establece la base del proyecto; las siguientes incorporan mapa, datos de UN Comtrade, rankings e internacionalización.
+## Build
+
+```sh
+npm run build
+```
+
+This first stage establishes the application foundation. Upcoming stages add the world map, UN Comtrade integration, export rankings, and localization.
