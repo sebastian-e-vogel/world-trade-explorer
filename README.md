@@ -2,7 +2,7 @@
 
 An interactive web application for exploring annual merchandise exports. Select a country on the map or through the searchable selector to see its total exports, three leading HS2 product categories, and three main export destinations. The dashboard displays USD values, shares, reference year, and source, while the map highlights the selected exporter and its buyers.
 
-This milestone presents the dashboard in English. Spanish localization follows in the next stage. All trade statistics are retrieved on demand from **UN Comtrade**. The application does not use fabricated statistics or maintain its own trade database.
+The interface supports English and Spanish. All trade statistics are retrieved on demand from **UN Comtrade**. The application does not use fabricated statistics or maintain its own trade database.
 
 ## Tech stack
 
@@ -61,7 +61,7 @@ A static-only deployment does not include `/api/comtrade`; the deployment must e
 - `src/data/`: API client, response adaptation, reference tables, and country mapping.
 - `src/hooks/`: TanStack Query orchestration and caching.
 - `src/components/`: map, country selector, and trade dashboard.
-- `src/i18n/`: English UI messages and presentation helpers using i18next.
+- `src/i18n/`: English and Spanish translations.
 - `public/`: geographic boundaries and attribution.
 - `api/` and `server/`: Vercel entry point and proxy shared with local development.
 - `tests/` and colocated test files: automated tests using saved fixtures without live Comtrade calls.
@@ -72,12 +72,8 @@ Trade statistics come from [UN Comtrade](https://comtradeplus.un.org/). Refer to
 
 Geographic boundaries come from [World Atlas](https://github.com/topojson/world-atlas), derived from [Natural Earth](https://www.naturalearthdata.com/). Credits and license information are retained in [`public/ATTRIBUTION.txt`](public/ATTRIBUTION.txt) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). Map boundaries provide geographic context and do not express a position on territorial disputes.
 
-## Dashboard and query behavior
+## Localization
 
-The selected reporting country uses its latest available annual period by default. Changing the country resets the requested year; changing the year uses a separate cache entry. Country and period query keys prevent a previous selection's response from appearing as the current profile. There are no requests on hover and no refetch on window focus.
+The interface uses i18next and react-i18next with local resources in `src/i18n/locales/`. Spanish is the initial language, and the selected language is saved in the browser. Switching languages does not request trade statistics again. Country names, numeric values, percentages, and dates follow the active locale. Spanish HS2 descriptions are display summaries; original source codes, classifications, and values remain unchanged.
 
-Temporary network, timeout, and service errors are retried at most once with backoff. Invalid data, missing records, rate limits, and identified daily quota failures are not automatically retried by the query layer. The interface shows loading, empty, error, and independently unavailable ranking states with manual retry controls. The proxy may separately retry one short transient rate limit.
-
-The map highlights only verified top buyers and labels historical destinations that cannot be matched to current boundaries. Compact values use millions and billions; exact USD amounts are available in value tooltips. The panel displays annual period, reported HS revision, source, and retrieval date.
-
-UI messages are organized with i18next and react-i18next using the bundled English catalog. This establishes the presentation boundary for the next localization milestone without changing API queries or trade values.
+The map and destination lists display “Islas Malvinas” in both languages. This presentation override preserves the original UN Comtrade and ISO identifiers and does not add a selectable reporter.

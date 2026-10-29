@@ -17,7 +17,7 @@ function Globe() {
   );
 }
 export function App() {
-  const { language, t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const [country, setCountry] = useState("32");
   const [requestedYear, setRequestedYear] = useState<number>();
   const [notice, setNotice] = useState<string>();
@@ -53,6 +53,23 @@ export function App() {
           </span>
         </a>
         <div className="header-right">
+          <label className="language-control">
+            <span>{t("language")}</span>
+            <select
+              value={language}
+              onChange={(event) =>
+                setLanguage(event.target.value === "en" ? "en" : "es")
+              }
+              aria-label={t("language")}
+            >
+              <option value="es" lang="es">
+                Español
+              </option>
+              <option value="en" lang="en">
+                English
+              </option>
+            </select>
+          </label>
           <span className="source-badge">
             <i />
             {t("sourceBadge")}
