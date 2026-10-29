@@ -1,0 +1,1899 @@
+[
+  {
+    "m49": "4",
+    "iso3": "AFG",
+    "name": "Afghanistan",
+    "iso2": "AF",
+    "mapId": "4"
+  },
+  {
+    "m49": "248",
+    "iso3": "ALA",
+    "name": "\u00c5land Islands ",
+    "iso2": "AX",
+    "mapId": "248"
+  },
+  {
+    "m49": "8",
+    "iso3": "ALB",
+    "name": "Albania",
+    "iso2": "AL",
+    "mapId": "8"
+  },
+  {
+    "m49": "12",
+    "iso3": "DZA",
+    "name": "Algeria",
+    "iso2": "DZ",
+    "mapId": "12"
+  },
+  {
+    "m49": "16",
+    "iso3": "ASM",
+    "name": "American Samoa",
+    "iso2": "AS",
+    "mapId": "16"
+  },
+  {
+    "m49": "20",
+    "iso3": "AND",
+    "name": "Andorra",
+    "iso2": "AD",
+    "mapId": "20"
+  },
+  {
+    "m49": "24",
+    "iso3": "AGO",
+    "name": "Angola",
+    "iso2": "AO",
+    "mapId": "24"
+  },
+  {
+    "m49": "660",
+    "iso3": "AIA",
+    "name": "Anguilla",
+    "iso2": "AI",
+    "mapId": "660"
+  },
+  {
+    "m49": "10",
+    "iso3": "ATA",
+    "name": "Antarctica",
+    "iso2": "AQ",
+    "mapId": "10"
+  },
+  {
+    "m49": "28",
+    "iso3": "ATG",
+    "name": "Antigua and Barbuda",
+    "iso2": "AG",
+    "mapId": "28"
+  },
+  {
+    "m49": "886",
+    "iso3": "YEM",
+    "name": "Arab Rep. of Yemen (...1990)",
+    "iso2": "YE",
+    "mapId": "887"
+  },
+  {
+    "m49": "32",
+    "iso3": "ARG",
+    "name": "Argentina",
+    "iso2": "AR",
+    "mapId": "32"
+  },
+  {
+    "m49": "51",
+    "iso3": "ARM",
+    "name": "Armenia",
+    "iso2": "AM",
+    "mapId": "51"
+  },
+  {
+    "m49": "533",
+    "iso3": "ABW",
+    "name": "Aruba",
+    "iso2": "AW",
+    "mapId": "533"
+  },
+  {
+    "m49": "36",
+    "iso3": "AUS",
+    "name": "Australia",
+    "iso2": "AU",
+    "mapId": "36"
+  },
+  {
+    "m49": "40",
+    "iso3": "AUT",
+    "name": "Austria",
+    "iso2": "AT",
+    "mapId": "40"
+  },
+  {
+    "m49": "31",
+    "iso3": "AZE",
+    "name": "Azerbaijan",
+    "iso2": "AZ",
+    "mapId": "31"
+  },
+  {
+    "m49": "44",
+    "iso3": "BHS",
+    "name": "Bahamas",
+    "iso2": "BS",
+    "mapId": "44"
+  },
+  {
+    "m49": "48",
+    "iso3": "BHR",
+    "name": "Bahrain",
+    "iso2": "BH",
+    "mapId": "48"
+  },
+  {
+    "m49": "50",
+    "iso3": "BGD",
+    "name": "Bangladesh",
+    "iso2": "BD",
+    "mapId": "50"
+  },
+  {
+    "m49": "52",
+    "iso3": "BRB",
+    "name": "Barbados",
+    "iso2": "BB",
+    "mapId": "52"
+  },
+  {
+    "m49": "112",
+    "iso3": "BLR",
+    "name": "Belarus",
+    "iso2": "BY",
+    "mapId": "112"
+  },
+  {
+    "m49": "56",
+    "iso3": "BEL",
+    "name": "Belgium",
+    "iso2": "BE",
+    "mapId": "56"
+  },
+  {
+    "m49": "58",
+    "iso3": "BEL",
+    "name": "Belgium-Luxembourg (...1998)",
+    "iso2": "BE",
+    "mapId": "56"
+  },
+  {
+    "m49": "84",
+    "iso3": "BLZ",
+    "name": "Belize",
+    "iso2": "BZ",
+    "mapId": "84"
+  },
+  {
+    "m49": "204",
+    "iso3": "BEN",
+    "name": "Benin",
+    "iso2": "BJ",
+    "mapId": "204"
+  },
+  {
+    "m49": "60",
+    "iso3": "BMU",
+    "name": "Bermuda",
+    "iso2": "BM",
+    "mapId": "60"
+  },
+  {
+    "m49": "64",
+    "iso3": "BTN",
+    "name": "Bhutan",
+    "iso2": "BT",
+    "mapId": "64"
+  },
+  {
+    "m49": "68",
+    "iso3": "BOL",
+    "name": "Bolivia (Plurinational State of)",
+    "iso2": "BO",
+    "mapId": "68"
+  },
+  {
+    "m49": "535",
+    "iso3": "BES",
+    "name": "Bonaire",
+    "iso2": "BQ",
+    "mapId": "535"
+  },
+  {
+    "m49": "70",
+    "iso3": "BIH",
+    "name": "Bosnia Herzegovina",
+    "iso2": "BA",
+    "mapId": "70"
+  },
+  {
+    "m49": "72",
+    "iso3": "BWA",
+    "name": "Botswana",
+    "iso2": "BW",
+    "mapId": "72"
+  },
+  {
+    "m49": "74",
+    "iso3": "BVT",
+    "name": "Bouvet Island",
+    "iso2": "BV",
+    "mapId": "74"
+  },
+  {
+    "m49": "80",
+    "iso3": "ATB",
+    "name": "Br. Antarctic Terr.",
+    "iso2": "BQ",
+    "mapId": ""
+  },
+  {
+    "m49": "86",
+    "iso3": "IOT",
+    "name": "Br. Indian Ocean Terr.",
+    "iso2": "IO",
+    "mapId": "86"
+  },
+  {
+    "m49": "92",
+    "iso3": "VGB",
+    "name": "Br. Virgin Isds",
+    "iso2": "VG",
+    "mapId": "92"
+  },
+  {
+    "m49": "76",
+    "iso3": "BRA",
+    "name": "Brazil",
+    "iso2": "BR",
+    "mapId": "76"
+  },
+  {
+    "m49": "96",
+    "iso3": "BRN",
+    "name": "Brunei Darussalam",
+    "iso2": "BN",
+    "mapId": "96"
+  },
+  {
+    "m49": "100",
+    "iso3": "BGR",
+    "name": "Bulgaria",
+    "iso2": "BG",
+    "mapId": "100"
+  },
+  {
+    "m49": "854",
+    "iso3": "BFA",
+    "name": "Burkina Faso",
+    "iso2": "BF",
+    "mapId": "854"
+  },
+  {
+    "m49": "108",
+    "iso3": "BDI",
+    "name": "Burundi",
+    "iso2": "BI",
+    "mapId": "108"
+  },
+  {
+    "m49": "132",
+    "iso3": "CPV",
+    "name": "Cabo Verde",
+    "iso2": "CV",
+    "mapId": "132"
+  },
+  {
+    "m49": "116",
+    "iso3": "KHM",
+    "name": "Cambodia",
+    "iso2": "KH",
+    "mapId": "116"
+  },
+  {
+    "m49": "120",
+    "iso3": "CMR",
+    "name": "Cameroon",
+    "iso2": "CM",
+    "mapId": "120"
+  },
+  {
+    "m49": "124",
+    "iso3": "CAN",
+    "name": "Canada",
+    "iso2": "CA",
+    "mapId": "124"
+  },
+  {
+    "m49": "136",
+    "iso3": "CYM",
+    "name": "Cayman Isds",
+    "iso2": "KY",
+    "mapId": "136"
+  },
+  {
+    "m49": "140",
+    "iso3": "CAF",
+    "name": "Central African Rep.",
+    "iso2": "CF",
+    "mapId": "140"
+  },
+  {
+    "m49": "148",
+    "iso3": "TCD",
+    "name": "Chad",
+    "iso2": "TD",
+    "mapId": "148"
+  },
+  {
+    "m49": "152",
+    "iso3": "CHL",
+    "name": "Chile",
+    "iso2": "CL",
+    "mapId": "152"
+  },
+  {
+    "m49": "156",
+    "iso3": "CHN",
+    "name": "China",
+    "iso2": "CN",
+    "mapId": "156"
+  },
+  {
+    "m49": "344",
+    "iso3": "HKG",
+    "name": "China, Hong Kong SAR",
+    "iso2": "HK",
+    "mapId": "344"
+  },
+  {
+    "m49": "446",
+    "iso3": "MAC",
+    "name": "China, Macao SAR",
+    "iso2": "MO",
+    "mapId": "446"
+  },
+  {
+    "m49": "162",
+    "iso3": "CXR",
+    "name": "Christmas Isds",
+    "iso2": "CX",
+    "mapId": "162"
+  },
+  {
+    "m49": "166",
+    "iso3": "CCK",
+    "name": "Cocos Isds",
+    "iso2": "CC",
+    "mapId": "166"
+  },
+  {
+    "m49": "170",
+    "iso3": "COL",
+    "name": "Colombia",
+    "iso2": "CO",
+    "mapId": "170"
+  },
+  {
+    "m49": "174",
+    "iso3": "COM",
+    "name": "Comoros",
+    "iso2": "KM",
+    "mapId": "174"
+  },
+  {
+    "m49": "178",
+    "iso3": "COG",
+    "name": "Congo",
+    "iso2": "CG",
+    "mapId": "178"
+  },
+  {
+    "m49": "184",
+    "iso3": "COK",
+    "name": "Cook Isds",
+    "iso2": "CK",
+    "mapId": "184"
+  },
+  {
+    "m49": "188",
+    "iso3": "CRI",
+    "name": "Costa Rica",
+    "iso2": "CR",
+    "mapId": "188"
+  },
+  {
+    "m49": "384",
+    "iso3": "CIV",
+    "name": "C\u00f4te d'Ivoire",
+    "iso2": "CI",
+    "mapId": "384"
+  },
+  {
+    "m49": "191",
+    "iso3": "HRV",
+    "name": "Croatia",
+    "iso2": "HR",
+    "mapId": "191"
+  },
+  {
+    "m49": "192",
+    "iso3": "CUB",
+    "name": "Cuba",
+    "iso2": "CU",
+    "mapId": "192"
+  },
+  {
+    "m49": "531",
+    "iso3": "CUW",
+    "name": "Cura\u00e7ao",
+    "iso2": "CW",
+    "mapId": "531"
+  },
+  {
+    "m49": "196",
+    "iso3": "CYP",
+    "name": "Cyprus",
+    "iso2": "CY",
+    "mapId": "196"
+  },
+  {
+    "m49": "203",
+    "iso3": "CZE",
+    "name": "Czechia",
+    "iso2": "CZ",
+    "mapId": "203"
+  },
+  {
+    "m49": "200",
+    "iso3": "CSK",
+    "name": "Czechoslovakia (...1992)",
+    "iso2": "CS",
+    "mapId": ""
+  },
+  {
+    "m49": "408",
+    "iso3": "PRK",
+    "name": "Dem. People's Rep. of Korea",
+    "iso2": "KP",
+    "mapId": "408"
+  },
+  {
+    "m49": "278",
+    "iso3": "DDR",
+    "name": "Dem. Rep. of Germany (...1990)",
+    "iso2": "DD",
+    "mapId": ""
+  },
+  {
+    "m49": "180",
+    "iso3": "COD",
+    "name": "Dem. Rep. of the Congo",
+    "iso2": "CD",
+    "mapId": "180"
+  },
+  {
+    "m49": "866",
+    "iso3": "VDR",
+    "name": "Dem. Rep. of Vietnam (...1974)",
+    "iso2": "VD",
+    "mapId": ""
+  },
+  {
+    "m49": "720",
+    "iso3": "YMD",
+    "name": "Dem. Yemen (...1990)",
+    "iso2": "YD",
+    "mapId": ""
+  },
+  {
+    "m49": "208",
+    "iso3": "DNK",
+    "name": "Denmark",
+    "iso2": "DK",
+    "mapId": "208"
+  },
+  {
+    "m49": "262",
+    "iso3": "DJI",
+    "name": "Djibouti",
+    "iso2": "DJ",
+    "mapId": "262"
+  },
+  {
+    "m49": "212",
+    "iso3": "DMA",
+    "name": "Dominica",
+    "iso2": "DM",
+    "mapId": "212"
+  },
+  {
+    "m49": "214",
+    "iso3": "DOM",
+    "name": "Dominican Rep.",
+    "iso2": "DO",
+    "mapId": "214"
+  },
+  {
+    "m49": "588",
+    "iso3": "PAK",
+    "name": "East and West Pakistan (...1971)",
+    "iso2": "PK",
+    "mapId": "586"
+  },
+  {
+    "m49": "218",
+    "iso3": "ECU",
+    "name": "Ecuador",
+    "iso2": "EC",
+    "mapId": "218"
+  },
+  {
+    "m49": "818",
+    "iso3": "EGY",
+    "name": "Egypt",
+    "iso2": "EG",
+    "mapId": "818"
+  },
+  {
+    "m49": "222",
+    "iso3": "SLV",
+    "name": "El Salvador",
+    "iso2": "SV",
+    "mapId": "222"
+  },
+  {
+    "m49": "226",
+    "iso3": "GNQ",
+    "name": "Equatorial Guinea",
+    "iso2": "GQ",
+    "mapId": "226"
+  },
+  {
+    "m49": "232",
+    "iso3": "ERI",
+    "name": "Eritrea",
+    "iso2": "ER",
+    "mapId": "232"
+  },
+  {
+    "m49": "233",
+    "iso3": "EST",
+    "name": "Estonia",
+    "iso2": "EE",
+    "mapId": "233"
+  },
+  {
+    "m49": "748",
+    "iso3": "SWZ",
+    "name": "Eswatini",
+    "iso2": "SZ",
+    "mapId": "748"
+  },
+  {
+    "m49": "231",
+    "iso3": "ETH",
+    "name": "Ethiopia",
+    "iso2": "ET",
+    "mapId": "231"
+  },
+  {
+    "m49": "230",
+    "iso3": "ETH",
+    "name": "Ethiopia (...1992)",
+    "iso2": "ET",
+    "mapId": "231"
+  },
+  {
+    "m49": "234",
+    "iso3": "FRO",
+    "name": "Faroe Isds",
+    "iso2": "FO",
+    "mapId": "234"
+  },
+  {
+    "m49": "238",
+    "iso3": "FLK",
+    "name": "Falkland Isds (Malvinas)",
+    "iso2": "FK",
+    "mapId": "238"
+  },
+  {
+    "m49": "280",
+    "iso3": "DEU",
+    "name": "Fed. Rep. of Germany (...1990)",
+    "iso2": "DE",
+    "mapId": "276"
+  },
+  {
+    "m49": "242",
+    "iso3": "FJI",
+    "name": "Fiji",
+    "iso2": "FJ",
+    "mapId": "242"
+  },
+  {
+    "m49": "246",
+    "iso3": "FIN",
+    "name": "Finland",
+    "iso2": "FI",
+    "mapId": "246"
+  },
+  {
+    "m49": "260",
+    "iso3": "ATF",
+    "name": "Fr. South Antarctic Terr.",
+    "iso2": "TF",
+    "mapId": "260"
+  },
+  {
+    "m49": "251",
+    "iso3": "FRA",
+    "name": "France",
+    "iso2": "FR",
+    "mapId": "250"
+  },
+  {
+    "m49": "254",
+    "iso3": "GUF",
+    "name": "French Guiana (Overseas France)",
+    "iso2": "GF",
+    "mapId": "254"
+  },
+  {
+    "m49": "266",
+    "iso3": "GAB",
+    "name": "Gabon",
+    "iso2": "GA",
+    "mapId": "266"
+  },
+  {
+    "m49": "270",
+    "iso3": "GMB",
+    "name": "Gambia",
+    "iso2": "GM",
+    "mapId": "270"
+  },
+  {
+    "m49": "268",
+    "iso3": "GEO",
+    "name": "Georgia",
+    "iso2": "GE",
+    "mapId": "268"
+  },
+  {
+    "m49": "276",
+    "iso3": "DEU",
+    "name": "Germany",
+    "iso2": "DE",
+    "mapId": "276"
+  },
+  {
+    "m49": "288",
+    "iso3": "GHA",
+    "name": "Ghana",
+    "iso2": "GH",
+    "mapId": "288"
+  },
+  {
+    "m49": "292",
+    "iso3": "GIB",
+    "name": "Gibraltar",
+    "iso2": "GI",
+    "mapId": "292"
+  },
+  {
+    "m49": "300",
+    "iso3": "GRC",
+    "name": "Greece",
+    "iso2": "GR",
+    "mapId": "300"
+  },
+  {
+    "m49": "304",
+    "iso3": "GRL",
+    "name": "Greenland",
+    "iso2": "GL",
+    "mapId": "304"
+  },
+  {
+    "m49": "308",
+    "iso3": "GRD",
+    "name": "Grenada",
+    "iso2": "GD",
+    "mapId": "308"
+  },
+  {
+    "m49": "312",
+    "iso3": "GLP",
+    "name": "Guadeloupe (Overseas France)",
+    "iso2": "GP",
+    "mapId": "312"
+  },
+  {
+    "m49": "316",
+    "iso3": "GUM",
+    "name": "Guam",
+    "iso2": "GU",
+    "mapId": "316"
+  },
+  {
+    "m49": "320",
+    "iso3": "GTM",
+    "name": "Guatemala",
+    "iso2": "GT",
+    "mapId": "320"
+  },
+  {
+    "m49": "831",
+    "iso3": "GGY",
+    "name": "Guernsey",
+    "iso2": "GG",
+    "mapId": "831"
+  },
+  {
+    "m49": "324",
+    "iso3": "GIN",
+    "name": "Guinea",
+    "iso2": "GN",
+    "mapId": "324"
+  },
+  {
+    "m49": "624",
+    "iso3": "GNB",
+    "name": "Guinea-Bissau",
+    "iso2": "GW",
+    "mapId": "624"
+  },
+  {
+    "m49": "328",
+    "iso3": "GUY",
+    "name": "Guyana",
+    "iso2": "GY",
+    "mapId": "328"
+  },
+  {
+    "m49": "332",
+    "iso3": "HTI",
+    "name": "Haiti",
+    "iso2": "HT",
+    "mapId": "332"
+  },
+  {
+    "m49": "334",
+    "iso3": "HMD",
+    "name": "Heard Island and McDonald Islands",
+    "iso2": "HM",
+    "mapId": "334"
+  },
+  {
+    "m49": "336",
+    "iso3": "VAT",
+    "name": "Holy See (Vatican City State)",
+    "iso2": "VA",
+    "mapId": "336"
+  },
+  {
+    "m49": "340",
+    "iso3": "HND",
+    "name": "Honduras",
+    "iso2": "HN",
+    "mapId": "340"
+  },
+  {
+    "m49": "348",
+    "iso3": "HUN",
+    "name": "Hungary",
+    "iso2": "HU",
+    "mapId": "348"
+  },
+  {
+    "m49": "352",
+    "iso3": "ISL",
+    "name": "Iceland",
+    "iso2": "IS",
+    "mapId": "352"
+  },
+  {
+    "m49": "699",
+    "iso3": "IND",
+    "name": "India",
+    "iso2": "IN",
+    "mapId": "356"
+  },
+  {
+    "m49": "356",
+    "iso3": "IND",
+    "name": "India (...1974)",
+    "iso2": "IN",
+    "mapId": "356"
+  },
+  {
+    "m49": "364",
+    "iso3": "IRN",
+    "name": "Iran",
+    "iso2": "IR",
+    "mapId": "364"
+  },
+  {
+    "m49": "368",
+    "iso3": "IRQ",
+    "name": "Iraq",
+    "iso2": "IQ",
+    "mapId": "368"
+  },
+  {
+    "m49": "372",
+    "iso3": "IRL",
+    "name": "Ireland",
+    "iso2": "IE",
+    "mapId": "372"
+  },
+  {
+    "m49": "833",
+    "iso3": "IMN",
+    "name": "Isle of Man ",
+    "iso2": "IM",
+    "mapId": "833"
+  },
+  {
+    "m49": "376",
+    "iso3": "ISR",
+    "name": "Israel",
+    "iso2": "IL",
+    "mapId": "376"
+  },
+  {
+    "m49": "380",
+    "iso3": "ITA",
+    "name": "Italy",
+    "iso2": "IT",
+    "mapId": "380"
+  },
+  {
+    "m49": "388",
+    "iso3": "JAM",
+    "name": "Jamaica",
+    "iso2": "JM",
+    "mapId": "388"
+  },
+  {
+    "m49": "392",
+    "iso3": "JPN",
+    "name": "Japan",
+    "iso2": "JP",
+    "mapId": "392"
+  },
+  {
+    "m49": "832",
+    "iso3": "JEY",
+    "name": "Jersey",
+    "iso2": "JE",
+    "mapId": "832"
+  },
+  {
+    "m49": "400",
+    "iso3": "JOR",
+    "name": "Jordan",
+    "iso2": "JO",
+    "mapId": "400"
+  },
+  {
+    "m49": "398",
+    "iso3": "KAZ",
+    "name": "Kazakhstan",
+    "iso2": "KZ",
+    "mapId": "398"
+  },
+  {
+    "m49": "404",
+    "iso3": "KEN",
+    "name": "Kenya",
+    "iso2": "KE",
+    "mapId": "404"
+  },
+  {
+    "m49": "296",
+    "iso3": "KIR",
+    "name": "Kiribati",
+    "iso2": "KI",
+    "mapId": "296"
+  },
+  {
+    "m49": "414",
+    "iso3": "KWT",
+    "name": "Kuwait",
+    "iso2": "KW",
+    "mapId": "414"
+  },
+  {
+    "m49": "417",
+    "iso3": "KGZ",
+    "name": "Kyrgyzstan",
+    "iso2": "KG",
+    "mapId": "417"
+  },
+  {
+    "m49": "418",
+    "iso3": "LAO",
+    "name": "Lao People's Dem. Rep.",
+    "iso2": "LA",
+    "mapId": "418"
+  },
+  {
+    "m49": "428",
+    "iso3": "LVA",
+    "name": "Latvia",
+    "iso2": "LV",
+    "mapId": "428"
+  },
+  {
+    "m49": "422",
+    "iso3": "LBN",
+    "name": "Lebanon",
+    "iso2": "LB",
+    "mapId": "422"
+  },
+  {
+    "m49": "426",
+    "iso3": "LSO",
+    "name": "Lesotho",
+    "iso2": "LS",
+    "mapId": "426"
+  },
+  {
+    "m49": "430",
+    "iso3": "LBR",
+    "name": "Liberia",
+    "iso2": "LR",
+    "mapId": "430"
+  },
+  {
+    "m49": "434",
+    "iso3": "LBY",
+    "name": "Libya",
+    "iso2": "LY",
+    "mapId": "434"
+  },
+  {
+    "m49": "438",
+    "iso3": "LIE",
+    "name": "Liechtenstein ",
+    "iso2": "LI",
+    "mapId": "438"
+  },
+  {
+    "m49": "440",
+    "iso3": "LTU",
+    "name": "Lithuania",
+    "iso2": "LT",
+    "mapId": "440"
+  },
+  {
+    "m49": "442",
+    "iso3": "LUX",
+    "name": "Luxembourg",
+    "iso2": "LU",
+    "mapId": "442"
+  },
+  {
+    "m49": "450",
+    "iso3": "MDG",
+    "name": "Madagascar",
+    "iso2": "MG",
+    "mapId": "450"
+  },
+  {
+    "m49": "454",
+    "iso3": "MWI",
+    "name": "Malawi",
+    "iso2": "MW",
+    "mapId": "454"
+  },
+  {
+    "m49": "458",
+    "iso3": "MYS",
+    "name": "Malaysia",
+    "iso2": "MY",
+    "mapId": "458"
+  },
+  {
+    "m49": "462",
+    "iso3": "MDV",
+    "name": "Maldives",
+    "iso2": "MV",
+    "mapId": "462"
+  },
+  {
+    "m49": "466",
+    "iso3": "MLI",
+    "name": "Mali",
+    "iso2": "ML",
+    "mapId": "466"
+  },
+  {
+    "m49": "470",
+    "iso3": "MLT",
+    "name": "Malta",
+    "iso2": "MT",
+    "mapId": "470"
+  },
+  {
+    "m49": "584",
+    "iso3": "MHL",
+    "name": "Marshall Isds",
+    "iso2": "MH",
+    "mapId": "584"
+  },
+  {
+    "m49": "474",
+    "iso3": "MTQ",
+    "name": "Martinique (Overseas France)",
+    "iso2": "MQ",
+    "mapId": "474"
+  },
+  {
+    "m49": "478",
+    "iso3": "MRT",
+    "name": "Mauritania",
+    "iso2": "MR",
+    "mapId": "478"
+  },
+  {
+    "m49": "480",
+    "iso3": "MUS",
+    "name": "Mauritius",
+    "iso2": "MU",
+    "mapId": "480"
+  },
+  {
+    "m49": "175",
+    "iso3": "MYT",
+    "name": "Mayotte (Overseas France)",
+    "iso2": "YT",
+    "mapId": "175"
+  },
+  {
+    "m49": "250",
+    "iso3": "FRA",
+    "name": "Metropolitan France",
+    "iso2": "FR",
+    "mapId": "250"
+  },
+  {
+    "m49": "484",
+    "iso3": "MEX",
+    "name": "Mexico",
+    "iso2": "MX",
+    "mapId": "484"
+  },
+  {
+    "m49": "496",
+    "iso3": "MNG",
+    "name": "Mongolia",
+    "iso2": "MN",
+    "mapId": "496"
+  },
+  {
+    "m49": "499",
+    "iso3": "MNE",
+    "name": "Montenegro",
+    "iso2": "ME",
+    "mapId": "499"
+  },
+  {
+    "m49": "500",
+    "iso3": "MSR",
+    "name": "Montserrat",
+    "iso2": "MS",
+    "mapId": "500"
+  },
+  {
+    "m49": "504",
+    "iso3": "MAR",
+    "name": "Morocco",
+    "iso2": "MA",
+    "mapId": "504"
+  },
+  {
+    "m49": "508",
+    "iso3": "MOZ",
+    "name": "Mozambique",
+    "iso2": "MZ",
+    "mapId": "508"
+  },
+  {
+    "m49": "104",
+    "iso3": "MMR",
+    "name": "Myanmar",
+    "iso2": "MM",
+    "mapId": "104"
+  },
+  {
+    "m49": "580",
+    "iso3": "MNP",
+    "name": "N. Mariana Isds",
+    "iso2": "MP",
+    "mapId": "580"
+  },
+  {
+    "m49": "516",
+    "iso3": "NAM",
+    "name": "Namibia",
+    "iso2": "NA",
+    "mapId": "516"
+  },
+  {
+    "m49": "520",
+    "iso3": "NRU",
+    "name": "Naoero",
+    "iso2": "NR",
+    "mapId": "520"
+  },
+  {
+    "m49": "524",
+    "iso3": "NPL",
+    "name": "Nepal",
+    "iso2": "NP",
+    "mapId": "524"
+  },
+  {
+    "m49": "528",
+    "iso3": "NLD",
+    "name": "Netherlands",
+    "iso2": "NL",
+    "mapId": "528"
+  },
+  {
+    "m49": "530",
+    "iso3": "ANT",
+    "name": "Netherlands Antilles (...2010)",
+    "iso2": "AN",
+    "mapId": ""
+  },
+  {
+    "m49": "532",
+    "iso3": "ANT",
+    "name": "Netherlands Antilles and Aruba (...1985)",
+    "iso2": "AN",
+    "mapId": ""
+  },
+  {
+    "m49": "540",
+    "iso3": "NCL",
+    "name": "New Caledonia",
+    "iso2": "NC",
+    "mapId": "540"
+  },
+  {
+    "m49": "554",
+    "iso3": "NZL",
+    "name": "New Zealand",
+    "iso2": "NZ",
+    "mapId": "554"
+  },
+  {
+    "m49": "558",
+    "iso3": "NIC",
+    "name": "Nicaragua",
+    "iso2": "NI",
+    "mapId": "558"
+  },
+  {
+    "m49": "562",
+    "iso3": "NER",
+    "name": "Niger",
+    "iso2": "NE",
+    "mapId": "562"
+  },
+  {
+    "m49": "566",
+    "iso3": "NGA",
+    "name": "Nigeria",
+    "iso2": "NG",
+    "mapId": "566"
+  },
+  {
+    "m49": "570",
+    "iso3": "NIU",
+    "name": "Niue",
+    "iso2": "NU",
+    "mapId": "570"
+  },
+  {
+    "m49": "574",
+    "iso3": "NFK",
+    "name": "Norfolk Isds",
+    "iso2": "NF",
+    "mapId": "574"
+  },
+  {
+    "m49": "807",
+    "iso3": "MKD",
+    "name": "North Macedonia",
+    "iso2": "MK",
+    "mapId": "807"
+  },
+  {
+    "m49": "579",
+    "iso3": "NOR",
+    "name": "Norway",
+    "iso2": "NO",
+    "mapId": "578"
+  },
+  {
+    "m49": "578",
+    "iso3": "NOR",
+    "name": "Norway, excluding Svalbard and Jan Mayen",
+    "iso2": "NO",
+    "mapId": "578"
+  },
+  {
+    "m49": "512",
+    "iso3": "OMN",
+    "name": "Oman",
+    "iso2": "OM",
+    "mapId": "512"
+  },
+  {
+    "m49": "582",
+    "iso3": "PCI",
+    "name": "Pacific Isds (...1991)",
+    "iso2": "PC",
+    "mapId": ""
+  },
+  {
+    "m49": "586",
+    "iso3": "PAK",
+    "name": "Pakistan",
+    "iso2": "PK",
+    "mapId": "586"
+  },
+  {
+    "m49": "585",
+    "iso3": "PLW",
+    "name": "Palau",
+    "iso2": "PW",
+    "mapId": "585"
+  },
+  {
+    "m49": "591",
+    "iso3": "PAN",
+    "name": "Panama",
+    "iso2": "PA",
+    "mapId": "591"
+  },
+  {
+    "m49": "590",
+    "iso3": "PAN",
+    "name": "Panama, excl.Canal Zone (...1977)",
+    "iso2": "PA",
+    "mapId": "591"
+  },
+  {
+    "m49": "592",
+    "iso3": "PCZ",
+    "name": "Panama-Canal-Zone (...1977)",
+    "iso2": "PZ",
+    "mapId": ""
+  },
+  {
+    "m49": "598",
+    "iso3": "PNG",
+    "name": "Papua New Guinea",
+    "iso2": "PG",
+    "mapId": "598"
+  },
+  {
+    "m49": "600",
+    "iso3": "PRY",
+    "name": "Paraguay",
+    "iso2": "PY",
+    "mapId": "600"
+  },
+  {
+    "m49": "604",
+    "iso3": "PER",
+    "name": "Peru",
+    "iso2": "PE",
+    "mapId": "604"
+  },
+  {
+    "m49": "612",
+    "iso3": "PCN",
+    "name": "Pitcairn",
+    "iso2": "PN",
+    "mapId": "612"
+  },
+  {
+    "m49": "616",
+    "iso3": "POL",
+    "name": "Poland",
+    "iso2": "PL",
+    "mapId": "616"
+  },
+  {
+    "m49": "620",
+    "iso3": "PRT",
+    "name": "Portugal",
+    "iso2": "PT",
+    "mapId": "620"
+  },
+  {
+    "m49": "630",
+    "iso3": "PRI",
+    "name": "Puerto Rico ",
+    "iso2": "PR",
+    "mapId": "630"
+  },
+  {
+    "m49": "634",
+    "iso3": "QAT",
+    "name": "Qatar",
+    "iso2": "QA",
+    "mapId": "634"
+  },
+  {
+    "m49": "410",
+    "iso3": "KOR",
+    "name": "Rep. of Korea",
+    "iso2": "KR",
+    "mapId": "410"
+  },
+  {
+    "m49": "498",
+    "iso3": "MDA",
+    "name": "Rep. of Moldova",
+    "iso2": "MD",
+    "mapId": "498"
+  },
+  {
+    "m49": "868",
+    "iso3": "VNM",
+    "name": "Rep. of Vietnam (...1974)",
+    "iso2": "VN",
+    "mapId": "704"
+  },
+  {
+    "m49": "638",
+    "iso3": "REU",
+    "name": "R\u00e9union (Overseas France)",
+    "iso2": "RE",
+    "mapId": "638"
+  },
+  {
+    "m49": "642",
+    "iso3": "ROU",
+    "name": "Romania",
+    "iso2": "RO",
+    "mapId": "642"
+  },
+  {
+    "m49": "643",
+    "iso3": "RUS",
+    "name": "Russian Federation",
+    "iso2": "RU",
+    "mapId": "643"
+  },
+  {
+    "m49": "646",
+    "iso3": "RWA",
+    "name": "Rwanda",
+    "iso2": "RW",
+    "mapId": "646"
+  },
+  {
+    "m49": "652",
+    "iso3": "BLM",
+    "name": "Saint Barth\u00e9lemy",
+    "iso2": "BL",
+    "mapId": "652"
+  },
+  {
+    "m49": "654",
+    "iso3": "SHN",
+    "name": "Saint Helena",
+    "iso2": "SH",
+    "mapId": "654"
+  },
+  {
+    "m49": "659",
+    "iso3": "KNA",
+    "name": "Saint Kitts and Nevis",
+    "iso2": "KN",
+    "mapId": "659"
+  },
+  {
+    "m49": "658",
+    "iso3": "KNA",
+    "name": "Saint Kitts, Nevis and Anguilla (...1980)",
+    "iso2": "KN",
+    "mapId": "659"
+  },
+  {
+    "m49": "662",
+    "iso3": "LCA",
+    "name": "Saint Lucia",
+    "iso2": "LC",
+    "mapId": "662"
+  },
+  {
+    "m49": "534",
+    "iso3": "SXM",
+    "name": "Saint Maarten",
+    "iso2": "SX",
+    "mapId": "534"
+  },
+  {
+    "m49": "663",
+    "iso3": "MAF",
+    "name": "Saint Martin (French part) ",
+    "iso2": "MF",
+    "mapId": "663"
+  },
+  {
+    "m49": "666",
+    "iso3": "SPM",
+    "name": "Saint Pierre and Miquelon",
+    "iso2": "PM",
+    "mapId": "666"
+  },
+  {
+    "m49": "882",
+    "iso3": "WSM",
+    "name": "Samoa",
+    "iso2": "WS",
+    "mapId": "882"
+  },
+  {
+    "m49": "674",
+    "iso3": "SMR",
+    "name": "San Marino",
+    "iso2": "SM",
+    "mapId": "674"
+  },
+  {
+    "m49": "678",
+    "iso3": "STP",
+    "name": "Sao Tome and Principe",
+    "iso2": "ST",
+    "mapId": "678"
+  },
+  {
+    "m49": "682",
+    "iso3": "SAU",
+    "name": "Saudi Arabia",
+    "iso2": "SA",
+    "mapId": "682"
+  },
+  {
+    "m49": "686",
+    "iso3": "SEN",
+    "name": "Senegal",
+    "iso2": "SN",
+    "mapId": "686"
+  },
+  {
+    "m49": "688",
+    "iso3": "SRB",
+    "name": "Serbia",
+    "iso2": "RS",
+    "mapId": "688"
+  },
+  {
+    "m49": "891",
+    "iso3": "SCG",
+    "name": "Serbia and Montenegro (...2005)",
+    "iso2": "CS",
+    "mapId": ""
+  },
+  {
+    "m49": "690",
+    "iso3": "SYC",
+    "name": "Seychelles",
+    "iso2": "SC",
+    "mapId": "690"
+  },
+  {
+    "m49": "694",
+    "iso3": "SLE",
+    "name": "Sierra Leone",
+    "iso2": "SL",
+    "mapId": "694"
+  },
+  {
+    "m49": "702",
+    "iso3": "SGP",
+    "name": "Singapore",
+    "iso2": "SG",
+    "mapId": "702"
+  },
+  {
+    "m49": "703",
+    "iso3": "SVK",
+    "name": "Slovakia",
+    "iso2": "SK",
+    "mapId": "703"
+  },
+  {
+    "m49": "705",
+    "iso3": "SVN",
+    "name": "Slovenia",
+    "iso2": "SI",
+    "mapId": "705"
+  },
+  {
+    "m49": "90",
+    "iso3": "SLB",
+    "name": "Solomon Isds",
+    "iso2": "SB",
+    "mapId": "90"
+  },
+  {
+    "m49": "706",
+    "iso3": "SOM",
+    "name": "Somalia",
+    "iso2": "SO",
+    "mapId": "706"
+  },
+  {
+    "m49": "710",
+    "iso3": "ZAF",
+    "name": "South Africa",
+    "iso2": "ZA",
+    "mapId": "710"
+  },
+  {
+    "m49": "239",
+    "iso3": "SGS",
+    "name": "South Georgia and the South Sandwich Islands",
+    "iso2": "GS",
+    "mapId": "239"
+  },
+  {
+    "m49": "728",
+    "iso3": "SSD",
+    "name": "South Sudan",
+    "iso2": "SS",
+    "mapId": "728"
+  },
+  {
+    "m49": "724",
+    "iso3": "ESP",
+    "name": "Spain",
+    "iso2": "ES",
+    "mapId": "724"
+  },
+  {
+    "m49": "144",
+    "iso3": "LKA",
+    "name": "Sri Lanka",
+    "iso2": "LK",
+    "mapId": "144"
+  },
+  {
+    "m49": "275",
+    "iso3": "PSE",
+    "name": "State of Palestine",
+    "iso2": "PS",
+    "mapId": "275"
+  },
+  {
+    "m49": "729",
+    "iso3": "SDN",
+    "name": "Sudan",
+    "iso2": "SD",
+    "mapId": "729"
+  },
+  {
+    "m49": "736",
+    "iso3": "SDN",
+    "name": "Sudan (...2011)",
+    "iso2": "SD",
+    "mapId": "729"
+  },
+  {
+    "m49": "740",
+    "iso3": "SUR",
+    "name": "Suriname",
+    "iso2": "SR",
+    "mapId": "740"
+  },
+  {
+    "m49": "744",
+    "iso3": "SJM",
+    "name": "Svalbard and Jan Mayen Islands ",
+    "iso2": "SJ",
+    "mapId": "744"
+  },
+  {
+    "m49": "752",
+    "iso3": "SWE",
+    "name": "Sweden",
+    "iso2": "SE",
+    "mapId": "752"
+  },
+  {
+    "m49": "756",
+    "iso3": "CHE",
+    "name": "Switzerland ",
+    "iso2": "CH",
+    "mapId": "756"
+  },
+  {
+    "m49": "757",
+    "iso3": "CHE",
+    "name": "Switzerland",
+    "iso2": "CH",
+    "mapId": "756"
+  },
+  {
+    "m49": "760",
+    "iso3": "SYR",
+    "name": "Syria",
+    "iso2": "SY",
+    "mapId": "760"
+  },
+  {
+    "m49": "158",
+    "iso3": "TWN",
+    "name": "Taiwan, Province of China",
+    "iso2": "TW",
+    "mapId": "158"
+  },
+  {
+    "m49": "762",
+    "iso3": "TJK",
+    "name": "Tajikistan",
+    "iso2": "TJ",
+    "mapId": "762"
+  },
+  {
+    "m49": "764",
+    "iso3": "THA",
+    "name": "Thailand",
+    "iso2": "TH",
+    "mapId": "764"
+  },
+  {
+    "m49": "626",
+    "iso3": "TLS",
+    "name": "Timor-Leste",
+    "iso2": "TL",
+    "mapId": "626"
+  },
+  {
+    "m49": "768",
+    "iso3": "TGO",
+    "name": "Togo",
+    "iso2": "TG",
+    "mapId": "768"
+  },
+  {
+    "m49": "772",
+    "iso3": "TKL",
+    "name": "Tokelau",
+    "iso2": "TK",
+    "mapId": "772"
+  },
+  {
+    "m49": "776",
+    "iso3": "TON",
+    "name": "Tonga",
+    "iso2": "TO",
+    "mapId": "776"
+  },
+  {
+    "m49": "780",
+    "iso3": "TTO",
+    "name": "Trinidad and Tobago",
+    "iso2": "TT",
+    "mapId": "780"
+  },
+  {
+    "m49": "788",
+    "iso3": "TUN",
+    "name": "Tunisia",
+    "iso2": "TN",
+    "mapId": "788"
+  },
+  {
+    "m49": "792",
+    "iso3": "TUR",
+    "name": "T\u00fcrkiye",
+    "iso2": "TR",
+    "mapId": "792"
+  },
+  {
+    "m49": "795",
+    "iso3": "TKM",
+    "name": "Turkmenistan",
+    "iso2": "TM",
+    "mapId": "795"
+  },
+  {
+    "m49": "796",
+    "iso3": "TCA",
+    "name": "Turks and Caicos Isds",
+    "iso2": "TC",
+    "mapId": "796"
+  },
+  {
+    "m49": "798",
+    "iso3": "TUV",
+    "name": "Tuvalu",
+    "iso2": "TV",
+    "mapId": "798"
+  },
+  {
+    "m49": "800",
+    "iso3": "UGA",
+    "name": "Uganda",
+    "iso2": "UG",
+    "mapId": "800"
+  },
+  {
+    "m49": "804",
+    "iso3": "UKR",
+    "name": "Ukraine",
+    "iso2": "UA",
+    "mapId": "804"
+  },
+  {
+    "m49": "784",
+    "iso3": "ARE",
+    "name": "United Arab Emirates",
+    "iso2": "AE",
+    "mapId": "784"
+  },
+  {
+    "m49": "826",
+    "iso3": "GBR",
+    "name": "United Kingdom",
+    "iso2": "GB",
+    "mapId": "826"
+  },
+  {
+    "m49": "834",
+    "iso3": "TZA",
+    "name": "United Rep. of Tanzania",
+    "iso2": "TZ",
+    "mapId": "834"
+  },
+  {
+    "m49": "581",
+    "iso3": "UMI",
+    "name": "United States Minor Outlying Islands",
+    "iso2": "UM",
+    "mapId": "581"
+  },
+  {
+    "m49": "840",
+    "iso3": "USA",
+    "name": "United States of America",
+    "iso2": "US",
+    "mapId": "840"
+  },
+  {
+    "m49": "858",
+    "iso3": "URY",
+    "name": "Uruguay",
+    "iso2": "UY",
+    "mapId": "858"
+  },
+  {
+    "m49": "849",
+    "iso3": "PUS",
+    "name": "US Misc. Pacific Isds",
+    "iso2": "PU",
+    "mapId": ""
+  },
+  {
+    "m49": "850",
+    "iso3": "VIR",
+    "name": "US Virgin Isds (...1980)",
+    "iso2": "VI",
+    "mapId": "850"
+  },
+  {
+    "m49": "842",
+    "iso3": "USA",
+    "name": "USA",
+    "iso2": "US",
+    "mapId": "840"
+  },
+  {
+    "m49": "841",
+    "iso3": "USA",
+    "name": "USA and Puerto Rico (...1980)",
+    "iso2": "US",
+    "mapId": "840"
+  },
+  {
+    "m49": "810",
+    "iso3": "SUN",
+    "name": "USSR (...1990)",
+    "iso2": "SU",
+    "mapId": ""
+  },
+  {
+    "m49": "860",
+    "iso3": "UZB",
+    "name": "Uzbekistan",
+    "iso2": "UZ",
+    "mapId": "860"
+  },
+  {
+    "m49": "548",
+    "iso3": "VUT",
+    "name": "Vanuatu",
+    "iso2": "VU",
+    "mapId": "548"
+  },
+  {
+    "m49": "862",
+    "iso3": "VEN",
+    "name": "Venezuela",
+    "iso2": "VE",
+    "mapId": "862"
+  },
+  {
+    "m49": "704",
+    "iso3": "VNM",
+    "name": "Viet Nam",
+    "iso2": "VN",
+    "mapId": "704"
+  },
+  {
+    "m49": "876",
+    "iso3": "WLF",
+    "name": "Wallis and Futuna Isds",
+    "iso2": "WF",
+    "mapId": "876"
+  },
+  {
+    "m49": "732",
+    "iso3": "ESH",
+    "name": "Western Sahara",
+    "iso2": "EH",
+    "mapId": "732"
+  },
+  {
+    "m49": "887",
+    "iso3": "YEM",
+    "name": "Yemen",
+    "iso2": "YE",
+    "mapId": "887"
+  },
+  {
+    "m49": "890",
+    "iso3": "YUG",
+    "name": "Yugoslavia (...1991)",
+    "iso2": "YU",
+    "mapId": ""
+  },
+  {
+    "m49": "894",
+    "iso3": "ZMB",
+    "name": "Zambia",
+    "iso2": "ZM",
+    "mapId": "894"
+  },
+  {
+    "m49": "716",
+    "iso3": "ZWE",
+    "name": "Zimbabwe",
+    "iso2": "ZW",
+    "mapId": "716"
+  }
+]
