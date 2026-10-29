@@ -1,12 +1,12 @@
 # World Trade Explorer
 
-An interactive world map for exploring countries. The map provides real geographic boundaries, hover feedback, country selection, a searchable selector, and a responsive dark interface.
+An interactive web application for exploring annual merchandise exports. Select a country on the map or through the searchable selector to see its total exports, three leading HS2 product categories, and three main export destinations. The dashboard displays USD values, shares, reference year, and source, while the map highlights the selected exporter and its buyers.
 
-The project is being published in stages. The UN Comtrade data layer is now available through a minimal serverless API. Dashboard presentation and localization follow in later milestones. The map interface still displays geographic context only; it does not display sample trade figures.
+This milestone presents the dashboard in English. Spanish localization follows in the next stage. All trade statistics are retrieved on demand from **UN Comtrade**. The application does not use fabricated statistics or maintain its own trade database.
 
 ## Tech stack
 
-React, strict TypeScript, Vite, react-simple-maps, and Vitest. The SVG map uses the Natural Earth projection and local World Atlas TopoJSON boundaries.
+React, strict TypeScript, Vite, TanStack Query, i18next, react-simple-maps, d3-geo, and Vitest. The map uses local geographic boundaries from World Atlas/Natural Earth. No database, user accounts, or scheduled data ingestion are required.
 
 ## Local development
 
@@ -17,65 +17,67 @@ npm ci
 npm run dev
 ```
 
+Open the local URL printed by Vite, normally `http://127.0.0.1:5173/`. To run the automated tests and create a production build:
+
 ```sh
 npm test
 npm run build
 ```
 
-No API key or environment file is required. The proxy uses UN Comtrade public preview endpoints. Geography is bundled locally. Google Fonts is optional; system fonts provide a fallback.
+The current public API integration requires no `.env` file or API key. `npm run preview` serves static build assets only; use `npm run dev` or `vercel dev` to exercise the API route locally.
 
-## Map behavior
+## Data integration
 
-- Click a supported country to select it; hover to see its name.
-- Search by country name, ISO alpha-2, or ISO alpha-3 code. The selector is also the keyboard-accessible alternative for countries that are small or missing from the simplified map.
-- The selected country uses a distinct fill and boundary. Keyboard focus follows the country shape without a rectangular outline.
-- Unsupported territories display an explanatory notice without changing the selected reporter.
-- Geographic loading failures display an error while the country selector remains available.
+The browser calls `/api/comtrade`. A small server function validates the parameters and queries UN Comtrade's public endpoints. Vercel exposes this function through `api/comtrade.ts`; Vite mounts the same handler during local development. The proxy makes the API accessible to the application without depending on the provider's browser CORS permissions. It remains subject to UN Comtrade's quotas and response limits.
 
-## Country identifiers
+A first country selection requests annual reporting availability, total exports, HS2 product categories, and export destinations. TanStack Query deduplicates requests and keeps responses fresh for 24 hours in browser memory, with a seven-day garbage collection period. Successful proxy responses permit 24-hour shared CDN caching.
 
-The country reference table comes from UN Comtrade. Reporting territories are mapped to numeric ISO identifiers through reference data, rather than assuming their codes match. For example, Comtrade's United States code is 842 while the geographic boundary uses 840. The map excludes Antarctica and retains a presentation label of Islas Malvinas for territory 238, which is not a selectable reporter.
+The adapter checks response completeness and consistency before displaying rankings. It rejects capped responses, inconsistent counts, duplicate rows, mixed HS levels or classifications, and values that do not reconcile with the World total. An unavailable ranking is identified explicitly while a valid total can remain visible. Missing data is never silently converted to zero.
+
+## Data limitations
+
+- The public preview endpoint returns at most 500 records per response. Potentially truncated responses are rejected rather than presented as complete rankings.
+- Reporting years come from each country's annual availability catalog. The latest available year is selected by default; monthly records are not substituted for annual data.
+- USD trade values use Comtrade's `primaryValue` field. Shares use the reporting country's total World exports as their denominator.
+- Products use HS2 chapters from the country's reported HS revision, displayed alongside the results. The application does not harmonize classifications across years.
+- Destinations represent countries or areas, not individual companies. World aggregates, groups, and non-geographic residual areas are excluded from buyer rankings.
+- Statistics may be provisional, revised, confidential, or unavailable for a particular country and year. Geographic boundaries and Comtrade reporting territories do not always match; the selector supports countries that are too small or absent from the map.
+- Provider rate limits still apply. Requests are paced within each warm function instance, with limited retries for temporary failures. This is not a distributed quota management system, and larger audiences may exhaust the public service's limits.
+
+A future private API key must be stored only in Vercel's server environment and sent upstream from the server. It must never use a `VITE_` prefix, appear in a frontend URL, or be returned to the browser. The current application does not read a private key.
+
+## Deploy to Vercel
+
+1. Push the completed project to GitHub and import the repository in Vercel.
+2. Select Node.js 22.x. `vercel.json` configures the build output and API function.
+3. No environment variables are needed for the current public API integration.
+4. After deployment, check `/api/comtrade?kind=availability&country=32` and select a country in the interface.
+
+A static-only deployment does not include `/api/comtrade`; the deployment must execute the Vercel function.
 
 ## Project structure
 
-- `src/components/`: world map and country selector.
-- `src/data/`: reporting-country reference table, identifier mapping, and tests.
-- `public/countries-110m.json`: simplified world boundaries at a 1:110 million scale.
-- `public/ATTRIBUTION.txt` and `THIRD_PARTY_NOTICES.md`: credits and licenses.
+- `src/domain/`: provider-independent models and ranking calculations.
+- `src/data/`: API client, response adaptation, reference tables, and country mapping.
+- `src/hooks/`: TanStack Query orchestration and caching.
+- `src/components/`: map, country selector, and trade dashboard.
+- `src/i18n/`: English UI messages and presentation helpers using i18next.
+- `public/`: geographic boundaries and attribution.
+- `api/` and `server/`: Vercel entry point and proxy shared with local development.
+- `tests/` and colocated test files: automated tests using saved fixtures without live Comtrade calls.
 
-## Attribution
+## Attribution and data usage
 
-Geography: [World Atlas](https://github.com/topojson/world-atlas), derived from [Natural Earth](https://www.naturalearthdata.com/). Country references: [UN Comtrade](https://comtradeplus.un.org/), with ISO mapping derived from [i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries). Borders provide geographic context and do not express a position on territorial disputes.
+Trade statistics come from [UN Comtrade](https://comtradeplus.un.org/). Refer to the [data usage policy](https://uncomtrade.org/docs/policy-on-comtrade-data-use/), [redistribution policy](https://uncomtrade.org/docs/re-dissemination-of-data/), and [disclaimer](https://uncomtrade.org/docs/read-me-first-disclaimer/). This application is a free visualization without bulk data exports. Review the provider's terms if its usage or redistribution scope changes.
 
-## UN Comtrade integration
+Geographic boundaries come from [World Atlas](https://github.com/topojson/world-atlas), derived from [Natural Earth](https://www.naturalearthdata.com/). Credits and license information are retained in [`public/ATTRIBUTION.txt`](public/ATTRIBUTION.txt) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). Map boundaries provide geographic context and do not express a position on territorial disputes.
 
-The browser-facing endpoint is `/api/comtrade`. Its handler lives in `server/comtradeProxy.ts`; Vite mounts it during development, and `api/comtrade.ts` exposes it as a Vercel function. The proxy uses a fixed upstream host, accepts GET only, validates reporting countries and years, rejects unknown or duplicate parameters, and does not accept arbitrary URLs or headers. It allows server-to-server requests without relying on UN Comtrade's browser CORS permissions. Provider quotas still apply.
+## Dashboard and query behavior
 
-Supported queries:
+The selected reporting country uses its latest available annual period by default. Changing the country resets the requested year; changing the year uses a separate cache entry. Country and period query keys prevent a previous selection's response from appearing as the current profile. There are no requests on hover and no refetch on window focus.
 
-```text
-/api/comtrade?kind=availability&country=32
-/api/comtrade?kind=total&country=32&year=2025
-/api/comtrade?kind=products&country=32&year=2025
-/api/comtrade?kind=buyers&country=32&year=2025
-```
+Temporary network, timeout, and service errors are retried at most once with backoff. Invalid data, missing records, rate limits, and identified daily quota failures are not automatically retried by the query layer. The interface shows loading, empty, error, and independently unavailable ranking states with manual retry controls. The proxy may separately retry one short transient rate limit.
 
-These examples use Argentina's reporter code and a specific annual period. Always obtain available years from the availability endpoint rather than assuming a country has data for that year.
+The map highlights only verified top buyers and labels historical destinations that cannot be matched to current boundaries. Compact values use millions and billions; exact USD amounts are available in value tooltips. The panel displays annual period, reported HS revision, source, and retrieval date.
 
-The proxy queries `public/v1/getDA/C/A/HS` for annual availability and `public/v1/preview/C/A/HS` for exports. Totals use World as partner and `TOTAL` as commodity. Products use `AG2` for HS2 chapters; destinations omit the first partner filter while retaining `TOTAL`. All statistical queries fix exports, World as second partner, total customs procedures, and total transport modes.
-
-The client and adapter remain independent of React. `primaryValue` is interpreted as USD trade value, and no missing value becomes zero. Rankings preserve leading zeros in HS codes and require a matching response count, fewer than 500 records, unique dimension keys, a consistent reported classification, and reconciliation with the World total. Invalid or incomplete rankings are marked unavailable while a validated total can remain usable. Buyers exclude World aggregates, groups, and non-geographic residual areas.
-
-Upstream requests time out after 18 seconds and are paced within each warm function process. A short transient HTTP 429 may be retried once; an identified daily quota exhaustion is not retried. Errors use structured codes and are not cached. Successful responses permit 24-hour shared CDN caching. Pacing is not coordinated across Vercel instances, so higher traffic can still exhaust provider limits. Daily quota detection currently relies on the provider's error text.
-
-## Tests
-
-Automated tests use saved UN Comtrade responses for Argentina, Brazil, the United States, and South Sudan. They validate totals and rankings, incomplete responses, null values, duplicate rows, mixed dimensions, country-code differences, network errors, and quota behavior. Proxy tests mock the upstream service and verify validation, error statuses, caching, and bounded retries. No automated test contacts the live API.
-
-## Vercel deployment
-
-Use Node.js 22.x and import the repository as a Vite project. `vercel.json` configures the build output and API function. No environment variables are required for the current public API integration. A static-only preview cannot execute `/api/comtrade`; use `npm run dev` or `vercel dev` for local API requests. A future private subscription key must remain in server-side environment variables and must never use a `VITE_` prefix or appear in frontend URLs or bundles.
-
-## Trade data usage
-
-Statistics and country reference tables come from [UN Comtrade](https://comtradeplus.un.org/). Review its [data usage policy](https://uncomtrade.org/docs/policy-on-comtrade-data-use/), [redistribution policy](https://uncomtrade.org/docs/re-dissemination-of-data/), and [disclaimer](https://uncomtrade.org/docs/read-me-first-disclaimer/). Annual data may be provisional, revised, confidential, or unavailable. Products retain each country's reported HS revision; the application does not harmonize classifications across years. This project is a free visualization and does not provide bulk data exports.
+UI messages are organized with i18next and react-i18next using the bundled English catalog. This establishes the presentation boundary for the next localization milestone without changing API queries or trade values.
