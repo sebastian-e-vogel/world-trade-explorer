@@ -1,3 +1,17 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-export default defineConfig({ plugins: [react()], build: { sourcemap: false } });
+import { handleComtrade } from "./server/comtradeProxy.ts";
+export default defineConfig({
+  plugins: [
+    react(),
+    {
+      name: "local-comtrade-api",
+      configureServer(server) {
+        server.middlewares.use("/api/comtrade", (req, res) => {
+          void handleComtrade(req, res);
+        });
+      },
+    },
+  ],
+  build: { sourcemap: false },
+});
