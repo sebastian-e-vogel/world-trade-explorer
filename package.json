@@ -33,6 +33,6 @@
     "world-atlas": "^2.0.2"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": "22.x"
   }
 }

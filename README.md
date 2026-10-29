@@ -10,7 +10,7 @@ React, strict TypeScript, Vite, TanStack Query, i18next, react-simple-maps, d3-g
 
 ## Local development
 
-Requires Node.js 22.12 or later and npm.
+Requires Node.js 22.12 or later within the 22.x series and npm.
 
 ```sh
 npm ci
@@ -49,9 +49,9 @@ A future private API key must be stored only in Vercel's server environment and 
 ## Deploy to Vercel
 
 1. Push the completed project to GitHub and import the repository in Vercel.
-2. Select Node.js 22.x. `vercel.json` configures the build output and API function.
+2. Select the Vite preset with the repository root (`./`), install command `npm ci`, build command `npm run build`, and output directory `dist`. The Node.js runtime is pinned to `22.x` in `package.json`; `vercel.json` configures the API function.
 3. No environment variables are needed for the current public API integration.
-4. After deployment, check `/api/comtrade?kind=availability&country=32` and select a country in the interface.
+4. Use `main` as the production branch. After deployment, check `/api/comtrade?kind=availability&country=32`, then verify country selection, year selection, and language switching. Future merges into `main` trigger production deployments through the GitHub integration.
 
 A static-only deployment does not include `/api/comtrade`; the deployment must execute the Vercel function.
 
