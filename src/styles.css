@@ -219,6 +219,7 @@ h1 span {
 }
 .map-panel {
   position: relative;
+  align-self: start;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -496,7 +497,7 @@ h3 {
   padding: 0;
   margin: 0;
 }
-.ranking-list li {
+.ranking-list > li {
   display: flex;
   gap: 12px;
   margin-bottom: 18px;
@@ -826,7 +827,7 @@ footer > a {
   .rank-values span:last-child {
     font-size: 11px;
   }
-  .ranking-list li {
+  .ranking-list > li {
     margin-bottom: 23px;
   }
   .section-heading > span {
@@ -955,4 +956,96 @@ html[lang="es"] .section-heading > span {
   .intro h1 {
     letter-spacing: -1px;
   }
+}
+
+.trade-breakdown {
+  margin-top: 12px;
+  border-top: 1px solid #344346;
+}
+.breakdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  color: #b4ccc4;
+  text-align: left;
+  font: inherit;
+  font-size: 10px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.breakdown-toggle:hover {
+  color: #f0d2a3;
+}
+.breakdown-toggle:focus-visible {
+  outline: 2px solid #d2b47d;
+  outline-offset: 3px;
+}
+.breakdown-toggle > span:last-child {
+  font-size: 16px;
+}
+.breakdown-basis,
+.breakdown-status {
+  color: #a5b7b1;
+  font-size: 10px;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+.breakdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breakdown-list > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+  padding: 9px 0;
+  border-top: 1px solid #2d3d40;
+}
+.breakdown-name {
+  color: #dce6e0;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.breakdown-values {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 10px;
+  color: #a5b7b1;
+  white-space: nowrap;
+}
+.breakdown-values strong {
+  color: #d8c095;
+  font-weight: 500;
+}
+.breakdown-footnote {
+  display: block;
+  color: #899d95;
+  font-size: 9px;
+  line-height: 1.6;
+  padding: 10px 0 4px;
+}
+.breakdown-status button {
+  padding: 8px 10px;
+  min-height: 36px;
+  border: 1px solid #465957;
+  border-radius: 4px;
+  background: #26383a;
+  color: #d7e1dc;
+  font: inherit;
+  cursor: pointer;
+}
+.breakdown-status button:disabled {
+  opacity: 0.65;
+  cursor: wait;
 }

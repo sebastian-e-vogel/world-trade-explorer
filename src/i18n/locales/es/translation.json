@@ -70,5 +70,13 @@
   "error.invalid": "Los datos recibidos son inválidos, incompletos o inconsistentes. No se pudo verificar su integridad.",
   "error.missing": "No hay un total anual de exportaciones de mercancías para este país y año.",
   "error.http": "UN Comtrade no está disponible temporalmente. Reintentá más tarde.",
-  "error.unknown": "No se pudieron cargar o verificar los datos. Volvé a intentarlo."
+  "error.unknown": "No se pudieron cargar o verificar los datos. Volvé a intentarlo.",
+  "productBuyerToggle": "3 compradores de este producto",
+  "buyerProductToggle": "3 productos vendidos a este país",
+  "breakdownLoading": "Verificando este desglose comercial…",
+  "productBuyerBasis": "Porcentaje de las exportaciones de este producto desde el país seleccionado.",
+  "buyerProductBasis": "Porcentaje de las exportaciones del país seleccionado hacia este destino.",
+  "breakdownEmpty": "No se informaron destinos o productos elegibles con un valor comercial positivo.",
+  "breakdownRemainder": "El resto del comercio queda fuera de estos tres primeros.",
+  "breakdownRetryWait": "Reintentar en {{seconds}} s"
 }

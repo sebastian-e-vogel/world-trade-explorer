@@ -5,17 +5,26 @@ import {
   adaptTotal,
   availableYears,
   safeRanking,
+  adaptTradeBreakdown,
 } from "./comtradeAdapter";
 import { countryForM49 } from "./countryMapping";
-import type { CountryTradeProfile, Ranking } from "../domain/trade";
+import type {
+  CountryTradeProfile,
+  Ranking,
+  TradeBreakdown,
+  TradeBreakdownRequest,
+} from "../domain/trade";
 export async function request(
   kind: string,
   country: string,
   year?: number,
   signal?: AbortSignal,
+  filters?: { product?: string; partner?: string },
 ): Promise<unknown> {
   const params = new URLSearchParams({ kind, country });
   if (year !== undefined) params.set("year", String(year));
+  if (filters?.product !== undefined) params.set("product", filters.product);
+  if (filters?.partner !== undefined) params.set("partner", filters.partner);
   const timeout = AbortSignal.timeout(55000);
   const combined = new AbortController();
   const abort = () => combined.abort();
@@ -63,6 +72,25 @@ export async function request(
 }
 export const fetchAvailableYears = async (code: string, signal?: AbortSignal) =>
   availableYears(await request("availability", code, undefined, signal), code);
+export async function fetchTradeBreakdown(
+  context: TradeBreakdownRequest,
+  signal?: AbortSignal,
+): Promise<TradeBreakdown> {
+  const filters =
+    context.kind === "product-buyers"
+      ? { product: context.productCode }
+      : { partner: context.buyerCode };
+  return adaptTradeBreakdown(
+    await request(
+      context.kind,
+      context.countryCode,
+      context.year,
+      signal,
+      filters,
+    ),
+    context,
+  );
+}
 export async function fetchCountryTrade(
   code: string,
   year: number,

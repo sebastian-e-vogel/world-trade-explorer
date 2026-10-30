@@ -70,5 +70,13 @@
   "error.invalid": "The returned data is invalid, incomplete or inconsistent. Completeness could not be verified.",
   "error.missing": "No annual merchandise export total is available for this country and year.",
   "error.http": "UN Comtrade is temporarily unavailable. Please try again later.",
-  "error.unknown": "The data could not be loaded or verified. Please try again."
+  "error.unknown": "The data could not be loaded or verified. Please try again.",
+  "productBuyerToggle": "Top 3 buyers of this product",
+  "buyerProductToggle": "Top 3 products for this buyer",
+  "breakdownLoading": "Verifying this trade breakdown…",
+  "productBuyerBasis": "Share of this product’s exports from the selected country.",
+  "buyerProductBasis": "Share of the selected country’s exports to this destination.",
+  "breakdownEmpty": "No eligible destinations or products with a positive trade value were reported.",
+  "breakdownRemainder": "Remaining trade falls outside this top three.",
+  "breakdownRetryWait": "Retry in {{seconds}}s"
 }

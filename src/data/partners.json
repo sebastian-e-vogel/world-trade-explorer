@@ -1895,5 +1895,40 @@
     "name": "Zimbabwe",
     "iso2": "ZW",
     "mapId": "716"
+  },
+  {
+    "m49": "258",
+    "iso3": "PYF",
+    "name": "French Polynesia",
+    "iso2": "PF",
+    "mapId": "258"
+  },
+  {
+    "m49": "360",
+    "iso3": "IDN",
+    "name": "Indonesia",
+    "iso2": "ID",
+    "mapId": "360"
+  },
+  {
+    "m49": "583",
+    "iso3": "FSM",
+    "name": "FS Micronesia",
+    "iso2": "FM",
+    "mapId": "583"
+  },
+  {
+    "m49": "608",
+    "iso3": "PHL",
+    "name": "Philippines",
+    "iso2": "PH",
+    "mapId": "608"
+  },
+  {
+    "m49": "670",
+    "iso3": "VCT",
+    "name": "Saint Vincent and the Grenadines",
+    "iso2": "VC",
+    "mapId": "670"
   }
 ]

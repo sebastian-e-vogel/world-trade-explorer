@@ -18,6 +18,29 @@ export interface TradePartner {
   valueUsd: number;
   sharePercent: number;
 }
+interface BreakdownContext {
+  countryCode: string;
+  year: number;
+  classification: string;
+  totalValueUsd: number;
+}
+export type TradeBreakdownRequest = BreakdownContext &
+  (
+    | { kind: "product-buyers"; productCode: string }
+    | { kind: "buyer-products"; buyerCode: string }
+  );
+export type TradeBreakdown = (
+  | (BreakdownContext & {
+      kind: "product-buyers";
+      productCode: string;
+      items: TradePartner[];
+    })
+  | (BreakdownContext & {
+      kind: "buyer-products";
+      buyerCode: string;
+      items: ExportProduct[];
+    })
+) & { source: "UN_COMTRADE"; lastFetchedAt: string };
 export type Ranking<T> =
   | { status: "complete"; items: T[] }
   | {
