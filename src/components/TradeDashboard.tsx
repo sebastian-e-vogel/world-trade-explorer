@@ -12,12 +12,15 @@ import {
   formatDate,
   issueMessage,
 } from "../i18n/labels";
+import { TradeBreakdown } from "./TradeBreakdown";
 function RankingList({
   ranking,
   type,
+  profile,
 }: {
   ranking: Ranking<ExportProduct> | Ranking<TradePartner>;
   type: "products" | "buyers";
+  profile: CountryTradeProfile;
 }) {
   const { language, t } = useLanguage();
   if (ranking.status === "unavailable")
@@ -62,6 +65,27 @@ function RankingList({
                   style={{ width: `${Math.min(100, item.sharePercent)}%` }}
                 />
               </div>
+              {item.valueUsd > 0 && (
+                <TradeBreakdown
+                  label={name}
+                  key={`${profile.countryCode}:${profile.year}:${profile.classification}:${type}:${code}:${item.valueUsd}`}
+                  context={{
+                    countryCode: profile.countryCode,
+                    year: profile.year,
+                    classification: profile.classification,
+                    totalValueUsd: item.valueUsd,
+                    ...("code" in item
+                      ? {
+                          kind: "product-buyers" as const,
+                          productCode: item.code,
+                        }
+                      : {
+                          kind: "buyer-products" as const,
+                          buyerCode: item.countryCode,
+                        }),
+                  }}
+                />
+              )}
             </div>
           </li>
         );
@@ -93,14 +117,22 @@ export function TradeDashboard({ profile }: { profile: CountryTradeProfile }) {
           <h3>{t("leadingExports")}</h3>
           <span>{t("hs2")}</span>
         </div>
-        <RankingList ranking={profile.topProducts} type="products" />
+        <RankingList
+          ranking={profile.topProducts}
+          type="products"
+          profile={profile}
+        />
       </section>
       <section className="ranking-section buyer-section">
         <div className="section-heading">
           <h3>{t("topDestinations")}</h3>
           <span>{t("shareExports")}</span>
         </div>
-        <RankingList ranking={profile.topBuyers} type="buyers" />
+        <RankingList
+          ranking={profile.topBuyers}
+          type="buyers"
+          profile={profile}
+        />
       </section>
       <div className="data-note">
         {t("classificationNote", { classification: profile.classification })}

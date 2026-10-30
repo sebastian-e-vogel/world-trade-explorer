@@ -1,14 +1,36 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { countries } from "../src/data/countryMapping.js";
+import { countries, isGeographicPartner } from "../src/data/countryMapping.js";
 const allowedCountries = new Set(countries.map((c) => c.m49));
-export type QueryKind = "availability" | "total" | "products" | "buyers";
+export type QueryKind =
+  | "availability"
+  | "total"
+  | "products"
+  | "buyers"
+  | "product-buyers"
+  | "buyer-products";
 export function upstreamUrl(params: URLSearchParams): URL {
   const kind = params.get("kind");
   const country = params.get("country");
   const year = params.get("year");
+  const product = params.get("product");
+  const partner = params.get("partner");
+  const allowedParams = [
+    "kind",
+    "country",
+    "year",
+    ...(kind === "product-buyers" ? ["product"] : []),
+    ...(kind === "buyer-products" ? ["partner"] : []),
+  ];
   if (
     !kind ||
-    !["availability", "total", "products", "buyers"].includes(kind) ||
+    ![
+      "availability",
+      "total",
+      "products",
+      "buyers",
+      "product-buyers",
+      "buyer-products",
+    ].includes(kind) ||
     !country ||
     !allowedCountries.has(country) ||
     (kind !== "availability" &&
@@ -16,10 +38,17 @@ export function upstreamUrl(params: URLSearchParams): URL {
         !/^\d{4}$/.test(year) ||
         Number(year) < 1962 ||
         Number(year) > new Date().getUTCFullYear())) ||
-    [...params.keys()].some((k) => !["kind", "country", "year"].includes(k)) ||
+    (kind === "product-buyers" && (!product || !/^\d{2}$/.test(product))) ||
+    (kind === "buyer-products" &&
+      (!partner ||
+        !/^[1-9]\d{0,3}$/.test(partner) ||
+        !isGeographicPartner(Number(partner)))) ||
+    [...params.keys()].some((k) => !allowedParams.includes(k)) ||
     [...params.keys()].some((k) => params.getAll(k).length !== 1)
   )
-    throw new Error("Invalid country, year or query kind.");
+    throw new Error(
+      "Invalid country, year, query kind, or breakdown selector.",
+    );
   const url = new URL(
     kind === "availability"
       ? "https://comtradeapi.un.org/public/v1/getDA/C/A/HS"
@@ -29,14 +58,23 @@ export function upstreamUrl(params: URLSearchParams): URL {
   if (kind !== "availability") {
     Object.entries({
       period: year!,
-      cmdCode: kind === "products" ? "AG2" : "TOTAL",
+      cmdCode:
+        kind === "products" || kind === "buyer-products"
+          ? "AG2"
+          : kind === "product-buyers"
+            ? product!
+            : "TOTAL",
       flowCode: "X",
       partner2Code: "0",
       customsCode: "C00",
       motCode: "0",
       includeDesc: "true",
     }).forEach(([k, v]) => url.searchParams.set(k, v));
-    if (kind !== "buyers") url.searchParams.set("partnerCode", "0");
+    if (kind !== "buyers" && kind !== "product-buyers")
+      url.searchParams.set(
+        "partnerCode",
+        kind === "buyer-products" ? partner! : "0",
+      );
   }
   return url;
 }
@@ -83,7 +121,7 @@ export async function handleComtrade(
     res.statusCode = 400;
     res.end(
       JSON.stringify({
-        error: "Invalid country, year or query kind.",
+        error: "Invalid country, year, query kind, or breakdown selector.",
         code: "invalid",
       }),
     );

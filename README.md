@@ -34,6 +34,25 @@ A first country selection requests annual reporting availability, total exports,
 
 The adapter checks response completeness and consistency before displaying rankings. It rejects capped responses, inconsistent counts, duplicate rows, mixed HS levels or classifications, and values that do not reconcile with the World total. An unavailable ranking is identified explicitly while a valid total can remain visible. Missing data is never silently converted to zero.
 
+## Product and destination breakdowns
+
+Each verified top product can be expanded to show its own top three geographic buyers. Each top destination can be expanded to show the three HS2 categories that the selected exporter sells to it. These are independent rankings: they are not restricted to the entries in the general top-three lists.
+
+Percentages have explicit parent denominators. Product buyers use that product's World export value; a destination's products use the total merchandise exports from the selected exporter to that destination. The same bilateral flow can therefore have different percentages in the two views. Values remain in USD, and the three percentages do not have to add to 100%.
+
+Details load only when opened. They have independent loading and error states, and closing and reopening a successful detail reuses the 24-hour query cache. Cache keys include exporter, year, classification, direction, selector, and the verified parent total. Language changes do not fetch another statistical dataset. An HTTP `Retry-After` prevents immediate manual retries inside a detail; failed details do not automatically retry when reopened.
+
+Additional bounded API routes:
+
+```text
+/api/comtrade?kind=product-buyers&country=32&year=2025&product=10
+/api/comtrade?kind=buyer-products&country=32&year=2025&partner=76
+```
+
+The first uses one exact HS2 chapter with all destinations. The second uses HS2 chapters for one fixed geographic partner. Both retain the existing export dimensions, classification checks, record limits, duplicate detection, and reconciliation against the parent total. If a response cannot be verified, its detail stays unavailable while the main profile remains visible.
+
+The first profile load still uses up to four requests; opening all six details adds at most six uncached queries, before retries. Preview quotas and rate limits still apply. No API key is needed for these tested query patterns. The geographic reference includes valid countries whose names contain the letters “nes”; only actual residual areas are excluded from buyer rankings.
+
 ## Data limitations
 
 - The public preview endpoint returns at most 500 records per response. Potentially truncated responses are rejected rather than presented as complete rankings.

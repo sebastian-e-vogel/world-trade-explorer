@@ -3,6 +3,8 @@ import type {
   ExportProduct,
   Ranking,
   TradePartner,
+  TradeBreakdown,
+  TradeBreakdownRequest,
 } from "../domain/trade";
 import { reconcile, sharePercent, topThree } from "../domain/rankings";
 import { TradeError } from "../lib/errors";
@@ -209,6 +211,104 @@ export function safeRanking<T>(fn: () => T[]): Ranking<T> {
       errorCode: e instanceof TradeError ? e.code : "invalid",
     };
   }
+}
+export function adaptTradeBreakdown(
+  value: unknown,
+  context: TradeBreakdownRequest,
+): TradeBreakdown {
+  const { countryCode, year, classification, totalValueUsd } = context;
+  if (!Number.isFinite(totalValueUsd) || totalValueUsd <= 0)
+    throw new TradeError(
+      "A positive parent total is required for a breakdown.",
+      "invalid",
+    );
+  const rows = validateRows(value, countryCode, year, classification);
+  if (!rows.length)
+    throw new TradeError(
+      "No complete breakdown is available for this selection.",
+      "missing",
+    );
+  const metadata = {
+    source: "UN_COMTRADE" as const,
+    lastFetchedAt: new Date().toISOString(),
+  };
+  if (context.kind === "product-buyers") {
+    if (
+      !/^\d{2}$/.test(context.productCode) ||
+      rows.some(
+        (row) =>
+          row.cmdCode !== context.productCode ||
+          row.aggrLevel !== 2 ||
+          !Number.isInteger(row.partnerCode) ||
+          row.partnerCode < 0,
+      ) ||
+      new Set(rows.map((row) => row.partnerCode)).size !== rows.length
+    )
+      throw new TradeError(
+        "Product destinations are duplicated or have inconsistent dimensions.",
+        "invalid",
+      );
+    const world = rows.find((row) => row.partnerCode === 0);
+    if (!world)
+      throw new TradeError("The product World total is missing.", "invalid");
+    reconcile([world.primaryValue!], totalValueUsd);
+    const bilateral = rows.filter((row) => row.partnerCode !== 0);
+    reconcile(
+      bilateral.map((row) => row.primaryValue!),
+      totalValueUsd,
+    );
+    return {
+      ...context,
+      ...metadata,
+      items: topThree(
+        bilateral
+          .filter(
+            (row) =>
+              isGeographicPartner(row.partnerCode) && row.primaryValue! > 0,
+          )
+          .map((row) => ({
+            countryCode: String(row.partnerCode),
+            name: partnerForM49(row.partnerCode)!.name,
+            valueUsd: row.primaryValue!,
+            sharePercent: sharePercent(row.primaryValue!, totalValueUsd),
+          })),
+      ),
+    };
+  }
+  const partner = Number(context.buyerCode);
+  if (
+    !isGeographicPartner(partner) ||
+    rows.some(
+      (row) =>
+        row.partnerCode !== partner ||
+        row.aggrLevel !== 2 ||
+        !/^\d{2}$/.test(row.cmdCode) ||
+        !row.cmdDesc?.trim(),
+    ) ||
+    new Set(rows.map((row) => row.cmdCode)).size !== rows.length
+  )
+    throw new TradeError(
+      "Bilateral HS2 records are duplicated or have inconsistent dimensions.",
+      "invalid",
+    );
+  reconcile(
+    rows.map((row) => row.primaryValue!),
+    totalValueUsd,
+  );
+  return {
+    ...context,
+    ...metadata,
+    items: topThree(
+      rows
+        .filter((row) => row.primaryValue! > 0)
+        .map((row) => ({
+          code: row.cmdCode,
+          name: row.cmdDesc!,
+          valueUsd: row.primaryValue!,
+          sharePercent: sharePercent(row.primaryValue!, totalValueUsd),
+        })),
+    ),
+  };
 }
 export function adaptProfile(
   code: string,
